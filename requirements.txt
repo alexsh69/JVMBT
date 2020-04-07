@@ -1,0 +1,8 @@
+flask
+flask-restful
+flask-cors
+pyyaml
+gevent
+flask-api
+requests
+lxml

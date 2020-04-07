@@ -1,0 +1,10 @@
+build:
+    sbt:
+        cmd: "sbt -DoutputFile={repository_root}\\out\\internal.jar assembly"
+        fail_string: "FAIL"
+    maven:
+        cmd: "mvn package -Dproject.build.directory={repository_root} -f {repository_root}\\pom.xml"
+        fail_string: "BUILD FAILURE"
+    gradle:
+        cmd: "gradle -b {repository_root}\\build.gradle -PjvmbtInternalClassifier=full -PjvmbtInternalName=internal -PjvmbtInternalVersion=1.0 fatJar"
+        fail_string: "BUILD FAILED"
